@@ -1,0 +1,53 @@
+header {
+  background-color: deepskyblue;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  min-height: 110px;
+  max-height: 120px;
+  
+}
+
+
+h4{
+  font-size: 1em;
+  color: black;
+}
+.search-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-height: 70%;
+}
+.search-input{
+  display: flex;
+  max-height: 20px;
+}
+
+h3{ 
+  margin: 0;
+}
+.top-row{
+  display: flex;
+  justify-content: space-between;
+  // padding: 0 20px;
+  align-items: center;
+  justify-self: flex-end;
+  // background-color: green;
+  width: 100%;
+  flex-grow: 3;
+}
+.top-nav{
+  display: flex;
+  justify-self: flex-end;
+}
+
+.bottom-row {
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  flex-grow: 2;
+  background-color: orange;
+}

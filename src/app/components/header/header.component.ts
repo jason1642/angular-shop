@@ -8,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  myCustomColor = 'yellow';
+  headerTitle = 'My angular shop';
 
   ngOnInit(): void {
     console.log('On component did mount')
   }
 
   ngOnDestroy(): void {
-    console.log('Unmounted component')
+    console.log('Unmounted component') 
   }
 
 }
