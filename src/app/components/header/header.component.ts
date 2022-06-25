@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
   myCustomColor = 'yellow';
   headerTitle = 'My angular shop';
- 
+  
   cartTotalItems = 7;
 
   ngOnInit(): void {
