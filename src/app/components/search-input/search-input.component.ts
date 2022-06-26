@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchInputService } from 'src/app/views/home-page/services/search-input.service';
 import axios from 'axios'
 @Component({
   selector: 'app-search-input',
@@ -10,8 +11,11 @@ import axios from 'axios'
   
 export class SearchInputComponent implements OnInit {
 
-  userInput: string = '';
-  constructor() {}
+  public userInput: string = '';
+  setInput: Function;
+  constructor(public searchInputService: SearchInputService) {
+    this.setInput = searchInputService.setInput
+  }
 
   
    private options = () =>( {
@@ -27,6 +31,7 @@ export class SearchInputComponent implements OnInit {
 
   public onInputChange = (event: any) => {
     this.userInput = event.target.value
+    // this.setInput(this.userInput)
     console.log(event.target.value)
     console.log('User input change')
   }
@@ -35,6 +40,7 @@ export class SearchInputComponent implements OnInit {
   public onSubmit = async () => {
       await axios.request(this.options()).then(function (response) {
         console.log(response);
+
       }).catch(function (error) {
         console.error(error);
       });

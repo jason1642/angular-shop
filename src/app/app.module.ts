@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchInputComponent } from './components/search-input/search-input.component';
+import { SearchInputService } from './views/home-page/services/search-input.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { SearchInputComponent } from './components/search-input/search-input.com
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [SearchInputService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
