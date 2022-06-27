@@ -28,8 +28,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     // console.log('On component did mount')
-    this.searchInputservice.getInput.subscribe(str => {
+    this.searchInputservice.currentInputState.subscribe(str => {
       console.log(str)
+      this.headerTitle = str
     })
   }
 

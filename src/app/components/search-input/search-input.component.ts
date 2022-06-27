@@ -32,6 +32,7 @@ export class SearchInputComponent implements OnInit {
   public onInputChange = (event: any) => {
     this.userInput = event.target.value
     // this.setInput(this.userInput)
+    this.searchInputService.setInput(event.target.value)
     console.log(event.target.value)
     console.log('User input change')
   }
