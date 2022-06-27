@@ -22,6 +22,7 @@ export class SearchInputComponent implements OnInit {
   private options = {
     method: 'GET',
     url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/countries/US/regions',
+    params: {limit: '10', offset: '3'},
     headers: {
       'X-RapidAPI-Key': '95e9fc104dmsha6ddc418cd1fc07p1de64cjsn2088bc16337e',
       'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'

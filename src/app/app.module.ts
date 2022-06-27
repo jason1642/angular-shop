@@ -8,13 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchInputComponent } from './components/search-input/search-input.component';
 import { SearchInputService } from './views/home-page/services/search-input.service';
 import { ButtonComponent } from './components/button/button.component';
+import { SearchResultsDisplayComponent } from './components/search-results-display/search-results-display.component';
+import { HomePageComponent } from './views/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SearchInputComponent,
-    ButtonComponent
+    ButtonComponent,
+    SearchResultsDisplayComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

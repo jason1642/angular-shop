@@ -3,10 +3,17 @@
 
 
   <div class="result-list">
-
-    <div class="result-card" *ngFor="let result of responseArray">
+    <div  *ngIf="responseArray[0]; else noResultsMessage" >
+       <div class="result-card" *ngFor="let result of responseArray">
       <div>{{result.name}}</div>
     </div>
+    </div>
+   
+
+    <ng-template #noResultsMessage>
+      No results found
+      <p>Use the search bar to perform another search</p>
+    </ng-template>
 
   </div>
 </div>
