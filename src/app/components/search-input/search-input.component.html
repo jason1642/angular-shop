@@ -6,8 +6,10 @@
     [value]="userInput"
     (keydown)='onInputChange($event)'
   />
-  <button
-    (click)="onSubmit()"
-   >Submit</button>
+  <app-button
+    [ngStyle]="{'background-color': 'blue'}"
+    (btnFunction)="onSubmit()"
+    text="Search"
+   ></app-button>
 
   </div>

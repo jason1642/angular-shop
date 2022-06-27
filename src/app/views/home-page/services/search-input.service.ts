@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +12,10 @@ export class SearchInputService {
   constructor() {
 
   }
-  public setInput(input: string) { 
+  public setInput(input: BehaviorSubject<string>) { 
     // console.log(input, 'this is from the service file')
-    this.userInput.next(input)
-    console.log('setting input in service')
+    this.userInput = input
+
   }
   
 }

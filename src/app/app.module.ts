@@ -7,12 +7,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchInputComponent } from './components/search-input/search-input.component';
 import { SearchInputService } from './views/home-page/services/search-input.service';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
