@@ -39,9 +39,10 @@ export class SearchInputComponent implements OnInit {
 
 
   public onSubmit = async () => {
+      const searchService = this.searchInputService
       await axios.request(this.options).then(function (response) {
         console.log(response);
-
+        searchService.setResults(response.data)
       }).catch(function (error) {
         console.error(error);
       });
