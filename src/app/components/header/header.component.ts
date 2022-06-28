@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
     this.searchInputservice.currentInputState.subscribe(str => {
       console.log(str)
       this.headerTitle = str
-    })
+    }) 
   }
 
 
