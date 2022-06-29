@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SearchInputService } from 'src/app/views/home-page/services/search-input.service';
 import { SearchInput } from 'src/app/views/types/interfaces/search-input';
 import { SearchInputComponent } from '../search-input/search-input.component';
-const dataArray = <Array<string>>['First string', 'second string', 'third string']
 import { faUser, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+const dataArray = <Array<string>>['Shirts', 'Pants', 'Shoes', 'Summer', 'Work Wear', 'Swim', 'Accessories','Jackets', 'Sale']
 
 
 @Component({

@@ -1,5 +1,5 @@
 header {
-  background-color: deepskyblue;
+  // background-color: deepskyblue;
   margin-bottom: 8px;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@ header {
   align-items: center;
   // min-height: 130px;
   // max-height: 120px;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 
@@ -45,20 +45,29 @@ h3{
   height: 40%;
   // flex-grow: 2;
   padding: 5px;
-  background-color: orange;
-  justify-content: space-between;
+  // background-color: orange;
+    justify-content: space-between;
 }
 
 .bottom-nav{
   display: flex;
   gap: 1em;
+  gap: 30px;
+}
+.bottom-nav-item{
+  font-size: 1.5em;
+  font-weight: 300;
+  color: rgb(87, 87, 87);
+  &:hover{
+    cursor: pointer;
+    color: black;
+  }
 }
 
 .search-container{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   max-height: 70%;
 }
 .search-label{
