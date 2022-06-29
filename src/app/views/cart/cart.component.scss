@@ -4,7 +4,7 @@
   flex-direction: column;
   border: 1px solid black;
   max-width: 80%;
-  margin: 20px auto 0;
+  margin: 20px auto;
 }
 h2{
   font-size: 30px;
@@ -13,6 +13,7 @@ h2{
 }
 .cart-container{
   display: flex;
+  min-height: 70vh;
 }
 
 .item-list{
@@ -39,19 +40,59 @@ h2{
 // Item Card - Top Row(4 columns), Bottom Row(item options)
 .item-card{
   display: flex;
+  flex-direction: column;
   background-color: palegreen;
   margin: 5px 0;
-  padding: 15px;
-  height: 140px;
+  padding: 5px;
+  // height: 140px;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
 }
 .card-main{
-
+  display: flex;
+  // flex: 4;
+  background-color: blanchedalmond;
+  width: 100%;
+} 
+.card-main > * {
+  justify-content: center;
+  align-items: center;
 }
-.image-container{
+.image-column-container{
+  display: flex;
+  flex: 1;
+  // height: 100%;
+  object-fit: contain;
+}
+.item-image{
+  width: 80%;
+  // height: 100%;
+  object-fit: contain;
+}
 
+.basic-info-column{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-column{
+  flex: 1;
+  display: flex;
+}
+.quantity-column{
+  flex: 1;
+  display: flex;
+}
+.item-total-sum{
+  display: flex;
+  flex: 1;
 }
 .card-footer{
+  display: flex;
+  // flex: 2;
+  justify-content: center;
+  background-color: orange;
+  min-height: 20px;
 
 }

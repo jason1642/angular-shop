@@ -6,10 +6,29 @@
     <div class="item-card" *ngFor="let item of userCart">
       
       <div class="card-main">
+        <div class="image-column-container">
+          <img
+            class="item-image"
+           alt="item"
+           src="https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&itemId=100848159-847&recipeName=680&swatchId=newyorkyankees&viewId=1" />
+        </div>
 
+        <div class="basic-info-column">
+          <div>Name</div>
+          <div>Name</div>
+          <div>Name</div>
+          <div>Name</div>
+        </div>
+        <div class="price-column">$34.99</div>
+        <div class="quantity-column">2</div>
+        <div class="item-total-sum">$69.98</div>
       </div>
 
-      <div class="card-footer"></div>
+      <div class="card-footer">
+        <!-- Create buttons for each option. Each must have cart item action functionality based on users cart -->
+        <app-options-nav></app-options-nav>
+      </div>
+
     </div>
   </div>
 
@@ -17,8 +36,34 @@
   <div class="divider"></div>
 
 
+
+
+
+
+
+
+
   <div class="total-price-display">
 
+    <div class="total-row">
+      <div class="row-property">Shipping Cost</div>
+      <div class="row-value">$5.99</div>
+    </div>
+
+    <div class="total-row">
+      <div class="row-property">Discount</div>
+      <div class="row-value">- $20.00</div>
+    </div>
+
+    <div class="total-row">
+      <div class="row-property">Tax</div>
+      <div class="row-value">$8.42</div>
+    </div>
+
+    <div class="cart-sum-price">
+      <div class="row-title">Estimated Total</div>
+      <div class="row-value">$236.24</div>
+    </div>
   </div>
 
 </div>

@@ -11,6 +11,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { SearchResultsDisplayComponent } from './components/search-results-display/search-results-display.component';
 import { HomePageComponent } from './views/home-page/home-page.component';
 import { CartComponent } from './views/cart/cart.component';
+import { OptionsNavComponent } from './components/options-nav/options-nav.component';
  
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CartComponent } from './views/cart/cart.component';
     ButtonComponent,
     SearchResultsDisplayComponent,
     HomePageComponent,
-    CartComponent
+    CartComponent,
+    OptionsNavComponent
   ],
   imports: [
     BrowserModule,
