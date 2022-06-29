@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./options-nav.component.scss']
 })
 export class OptionsNavComponent implements OnInit {
-
+  options = ['Remove', 'Edit', 'Save for later']
   constructor() { }
 
   ngOnInit(): void {

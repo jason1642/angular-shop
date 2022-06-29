@@ -2,3 +2,15 @@
   display: flex;
   gap: 10px;
 }
+.item{
+  padding: 2px;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: rgb(100, 100, 100);
+  border-width: 0;
+  background-color: transparent;
+  &:hover{
+    color: black;
+    cursor: pointer;
+  }
+}

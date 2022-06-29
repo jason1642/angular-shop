@@ -16,15 +16,15 @@ h2{
 }
 .cart-container{
   display: flex;
-  margin-top: 15px;;
-  // min-height: 70vh;
+  margin: 10px;
+  max-height: 70vh;
 }
 
 .item-list{
   display: flex;
   flex-direction: column;
   min-height: 500px;
-  height: 100%;
+  max-height: 100%;
   // background-color: aqua;
   flex: 6;
   overflow: auto;
@@ -48,8 +48,8 @@ h2{
   display: flex;
   flex-direction: column;
   // background-color: palegreen;
-  margin: 5px 0;
-  padding: 5px;
+  // margin: 5px 0;
+  padding: 15px 8px 5px;
   // height: 140px;
   border-top: 1px solid grey;
   // border-bottom: 1px solid grey;
@@ -61,8 +61,11 @@ h2{
   width: 100%;
 } 
 .card-main > * {
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 1.3em;
 }
 .image-column-container{
   display: flex;
@@ -85,11 +88,17 @@ h2{
 .basic-info-column > *{
   text-align: left;
   width: 80%;
+  
+  gap: 5px;
   color: rgb(101, 101, 101);
 }
 .price-column{
   flex: 1;
   display: flex;
+}
+.column-label{
+  display: flex;
+  flex-direction: column;
 }
 .quantity-column{
   flex: 1;
@@ -130,5 +139,5 @@ h2{
 .row-divider{
   width: 93%;
   margin: 0 auto;
-  border: 1px solid rgb(72, 72, 72);
+  border: 1px solid rgb(88, 88, 88);
 }
