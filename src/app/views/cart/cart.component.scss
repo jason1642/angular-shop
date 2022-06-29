@@ -1,36 +1,42 @@
-// Containers/Title
+// Containers / Title
 .container{
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  // border: 1px solid black;
   max-width: 80%;
-  margin: 20px auto;
+  margin: 25px auto;
+  max-height: 80vh;
 }
 h2{
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 300;
   text-align: center;
+  width: 100%;
+  margin: 10px 0;
 }
 .cart-container{
   display: flex;
-  min-height: 70vh;
+  margin-top: 15px;;
+  // min-height: 70vh;
 }
 
 .item-list{
   display: flex;
   flex-direction: column;
   min-height: 500px;
-  background-color: aqua;
+  height: 100%;
+  // background-color: aqua;
   flex: 6;
+  overflow: auto;
 }
 .divider{
   flex: .8;
-  background-color: green;
+  // background-color: green;
 }
 .total-price-display{
   flex: 3;
-  background-color: red;
-
+  // background-color: rgb(165, 163, 163);
+  padding: 5px;
 }
 
 
@@ -41,17 +47,17 @@ h2{
 .item-card{
   display: flex;
   flex-direction: column;
-  background-color: palegreen;
+  // background-color: palegreen;
   margin: 5px 0;
   padding: 5px;
   // height: 140px;
   border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  // border-bottom: 1px solid grey;
 }
 .card-main{
   display: flex;
   // flex: 4;
-  background-color: blanchedalmond;
+  // background-color: blanchedalmond;
   width: 100%;
 } 
 .card-main > * {
@@ -74,8 +80,13 @@ h2{
   flex: 1;
   display: flex;
   flex-direction: column;
+  // background-color: palegreen;
 }
-
+.basic-info-column > *{
+  text-align: left;
+  width: 80%;
+  color: rgb(101, 101, 101);
+}
 .price-column{
   flex: 1;
   display: flex;
@@ -90,9 +101,34 @@ h2{
 }
 .card-footer{
   display: flex;
-  // flex: 2;
+  // flex: 1;
+  align-items: center;
   justify-content: center;
-  background-color: orange;
-  min-height: 20px;
+  // background-color: orange;
+  max-height: 28px;
 
+}
+
+// Total Display Side
+
+.total-row{
+  display: flex;
+  padding: 10px;
+  margin: 8px 0;
+  justify-content: space-between;
+}
+.row-property{
+  font-size: 22px;
+  font-weight: 300;
+  color:rgb(101, 101, 101);
+}
+.row-value{
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.row-divider{
+  width: 93%;
+  margin: 0 auto;
+  border: 1px solid rgb(72, 72, 72);
 }
