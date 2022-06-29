@@ -2,24 +2,40 @@
   
   <div class="top-row">
     <h1>Angular Shop</h1>
-    <h3>Here there will be a search bar, personal links such as a cart link</h3>
+   
 
-    <div class="search-container">
-      <h4>Search</h4>
-      <app-search-input text="Search"></app-search-input>
-    </div>
+    
 
     <div class="top-nav">
-      <button>Account</button>
-      <a routerLink="/cart">{{cartTotalItems}}Cart</a>
+      <a routerLink="/account" class="top-nav-button">
+        <fa-icon [icon]="faUser"></fa-icon>
+
+      </a>
+      <a routerLink="/cart" class="top-nav-button">
+        {{cartTotalItems}}
+        <fa-icon [icon]="faCartShopping"></fa-icon>
+      </a>
     </div>
 
   </div>
   
 
-  <div class="bottom-row">
-    {{headerTitle}}
-    <div *ngFor="let string of dataArray" >{{string}}</div>
 
+
+
+
+  <div class="bottom-row">
+    <div class="bottom-nav">
+      <div *ngFor="let string of dataArray" >{{string}}</div>
+    </div>
+    
+
+
+<div class="search-container">
+    <div class="search-label">Search</div>
+    <app-search-input text="Search"></app-search-input>
   </div>
+  </div>
+
+  
 </header>

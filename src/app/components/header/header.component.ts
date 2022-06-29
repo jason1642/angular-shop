@@ -3,7 +3,7 @@ import { SearchInputService } from 'src/app/views/home-page/services/search-inpu
 import { SearchInput } from 'src/app/views/types/interfaces/search-input';
 import { SearchInputComponent } from '../search-input/search-input.component';
 const dataArray = <Array<string>>['First string', 'second string', 'third string']
-
+import { faUser, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -15,8 +15,8 @@ const dataArray = <Array<string>>['First string', 'second string', 'third string
 
   
 export class HeaderComponent implements OnInit {
-
-  
+  faUser = faUser;
+  faCartShopping = faCartShopping;
 
   constructor(private searchInputservice: SearchInputService) { 
     

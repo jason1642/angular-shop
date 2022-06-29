@@ -12,6 +12,8 @@ import { SearchResultsDisplayComponent } from './components/search-results-displ
 import { HomePageComponent } from './views/home-page/home-page.component';
 import { CartComponent } from './views/cart/cart.component';
 import { OptionsNavComponent } from './components/options-nav/options-nav.component';
+import { AccountPageComponent } from './views/account-page/account-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
  
 @NgModule({
   declarations: [
@@ -22,12 +24,15 @@ import { OptionsNavComponent } from './components/options-nav/options-nav.compon
     SearchResultsDisplayComponent,
     HomePageComponent,
     CartComponent,
-    OptionsNavComponent
+    OptionsNavComponent,
+    AccountPageComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [SearchInputService],
   bootstrap: [AppComponent]
