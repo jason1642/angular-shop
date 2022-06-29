@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
-import { HomePageRoutingModule } from './views/home-page/home-page-routing.module';
+import { CartComponent } from './views/cart/cart.component';
+import { HomePageComponent } from './views/home-page/home-page.component'
 
 const routes: Routes = [
-  { path: 'cart', component: HomePageRoutingModule },
+  { path: '', component: HomePageComponent },
+  { path: 'home', component: HomePageComponent },
+  { path: 'cart', component: CartComponent }
 ];
 
 @NgModule({

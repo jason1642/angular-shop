@@ -10,7 +10,8 @@ import { SearchInputService } from './views/home-page/services/search-input.serv
 import { ButtonComponent } from './components/button/button.component';
 import { SearchResultsDisplayComponent } from './components/search-results-display/search-results-display.component';
 import { HomePageComponent } from './views/home-page/home-page.component';
-
+import { CartComponent } from './views/cart/cart.component';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { HomePageComponent } from './views/home-page/home-page.component';
     SearchInputComponent,
     ButtonComponent,
     SearchResultsDisplayComponent,
-    HomePageComponent
+    HomePageComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -29,3 +31,4 @@ import { HomePageComponent } from './views/home-page/home-page.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

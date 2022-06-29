@@ -1,0 +1,57 @@
+// Containers/Title
+.container{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  max-width: 80%;
+  margin: 20px auto 0;
+}
+h2{
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+.cart-container{
+  display: flex;
+}
+
+.item-list{
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  background-color: aqua;
+  flex: 6;
+}
+.divider{
+  flex: .8;
+  background-color: green;
+}
+.total-price-display{
+  flex: 3;
+  background-color: red;
+
+}
+
+
+
+
+
+// Item Card - Top Row(4 columns), Bottom Row(item options)
+.item-card{
+  display: flex;
+  background-color: palegreen;
+  margin: 5px 0;
+  padding: 15px;
+  height: 140px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.card-main{
+
+}
+.image-container{
+
+}
+.card-footer{
+
+}
