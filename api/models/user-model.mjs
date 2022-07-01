@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import validator from 'validator'
+import {itemSchema } from './item-model.mjs'
 
 const snakeCaseStamps = {
   timestamps: {
@@ -11,12 +12,12 @@ const User = mongoose.model('User', new mongoose.Schema({
   _id: {
     type: mongoose.Schema.Types.ObjectId
   },
-  username: {
+  name: {
     type: String,
     required: true,
     minlength: 3,
     maxlength: 24,
-    validate: [validator.isAlphanumeric, 'Usernames may only have letters and numbers.']
+    validate: [validator.isAlphanumeric, 'Names may only have letters and numbers.']
   },
   password: {
     type: String,
@@ -50,7 +51,31 @@ const User = mongoose.model('User', new mongoose.Schema({
   // listings: {
   //   type: [itemSchema], default: []
   // },
+  cart: {
+    type: [itemSchema],
+    default: []
+  },
+  order: {
+    type: [itemSchema],
+    default: []
+  },
+  social_handles: {
+    twitter: { type: String },
+    instagram: { type: String },
+    facebook: { type: String },
+    youtube: { type: String },
 
+  },
+  shipping_address: {
+    type: [{
+      type: {
+        name: String,
+        street: String,
+        city: String,
+        country: String,
+      }
+    }]
+  },
   preferences: {
     type: {
       dark_mode: { type: Boolean, default: false },
