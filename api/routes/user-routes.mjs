@@ -52,9 +52,25 @@ const getOneUser = async (req, res, next) => {
 userRouter.get('/:id', getOneUser)
 
 
+
+const updateUser = async (req, res, next) => {
+  try {
+    const user = await User.findById(mongoose.Types.ObjectId(req.params.id))
+    console.log()
+    await user.updateOne(req.body)
+    await user.save()
+    return res.send(user)
+  
+  } catch (err) {
+    return res.status(404).json({message: 'User not found'})
+  }
+
+}
+userRouter.put('/:id/update', updateUser)
+
 const deleteUser = async (req, res) => {
   try {
-     await User.deleteOne({ _id: mongoose.Types.ObjectId(req.body.user_id) }).then(message => {
+     await User.deleteOne({ _id: mongoose.Types.ObjectId(req.params.id) }).then(message => {
     return res.send(message)
   })
   } catch (err) {
@@ -63,7 +79,7 @@ const deleteUser = async (req, res) => {
  
 }
 
-userRouter.delete('/delete', deleteUser)
+userRouter.delete('/:id/delete', deleteUser)
 
 
 
