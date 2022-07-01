@@ -23,6 +23,55 @@ const createUser = async (req, res, next) => {
 userRouter.post('/create', createUser)
 
 
+const getAllUsers = async (req, res) =>
+  await User.find({}).then(users => {
+    return res.send(users)
+  })
+
+userRouter.get('/all', getAllUsers)
+
+const getOneUser = async (req, res, next) => {
+  try {
+    // const userId = new mongoose.Types.ObjectId(req.params.id)
+    await User.findById(mongoose.Types.ObjectId(req.params.id))
+      .then(user => {
+        console.log(user.name)
+      if (user.name) {
+        console.log(user.name)
+        return res.send(user)
+      } else {
+        return res.status(404).send({message: 'User does not exist'})
+      }
+    })  
+  } catch (err) {
+    console.log({message: 'User not found'})
+    return res.status(404).send({message: 'User not found'})
+  }
+
+}
+userRouter.get('/:id', getOneUser)
+
+
+const deleteUser = async (req, res) => {
+  try {
+     await User.deleteOne({ _id: mongoose.Types.ObjectId(req.body.user_id) }).then(message => {
+    return res.send(message)
+  })
+  } catch (err) {
+    return res.json({message: 'User not found'})
+  }
+ 
+}
+
+userRouter.delete('/delete', deleteUser)
+
+
+
+
+
+
+
+
 
 
 
