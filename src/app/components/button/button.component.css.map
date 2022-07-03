@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACF,OAAO,EAAE,QAAQ;EACjB,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "button.component.scss"
+    ],
+    "names": [],
+    "file": "button.component.css"
+}

@@ -10,30 +10,38 @@ const snakeCaseStamps = {
 
 const userAnswers = new mongoose.Schema({
   question_id: {
-    types: mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Question'
   },
-  author: {
+  author:{
+    type: {
     user_id: {
-      type: {
-        user_id: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-        }
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+        
       },
       name: String,
       profile_image: String,
     },
     required: true,
+  },
+  content: String,
+  upvotes: Number,
 
 }, snakeCaseStamps)
 
 
 
-const itemQuestionSchema = new mongoose.Schema({
+const questionSchema = new mongoose.Schema({
   _id: {
     type: mongoose.Schema.Types.ObjectId
   },
+  item_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Item',
+  },
   author: {
+    _id: false,
     type: {
       user_id: {
         type: mongoose.Schema.Types.ObjectId,
@@ -45,13 +53,14 @@ const itemQuestionSchema = new mongoose.Schema({
     required: true,
   },
   content: String,
+  upvotes: Number,
   answers: [userAnswers]
 })
 
 
-const Question = mongoose.model('Question', itemQuestionSchema)
+const Question = mongoose.model('Question', questionSchema)
 
-export { itemQuestionSchema, Question }
+export { questionSchema, Question }
 
 
 

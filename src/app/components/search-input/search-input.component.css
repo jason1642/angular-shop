@@ -1,0 +1,11 @@
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: green;
+}
+
+.text-input {
+  display: block;
+}
+/*# sourceMappingURL=search-input.component.css.map */

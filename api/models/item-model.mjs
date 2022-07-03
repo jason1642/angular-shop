@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import validator from 'validator'
+import { questionSchema } from './question-model.mjs';
 
 
 const snakeCaseStamps = {
@@ -55,8 +56,10 @@ const itemSchema = new mongoose.Schema({
   images: [String],
 
   questions: {
-    type: [],
-
+    type: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Question'
+    }],
   },
 
   _id: {

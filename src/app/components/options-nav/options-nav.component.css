@@ -1,0 +1,21 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  padding: 2px;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #646464;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.item:hover {
+  color: black;
+  cursor: pointer;
+}
+/*# sourceMappingURL=options-nav.component.css.map */

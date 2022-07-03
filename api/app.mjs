@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use('/user', userRouter)
 app.use('/item', itemRouter)
-app.use('/quetion', questionRouter)
+app.use('/question', questionRouter)
 
 
 
