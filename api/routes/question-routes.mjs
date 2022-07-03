@@ -74,7 +74,8 @@ questionRouter.get('/:id', getOneQuestion)
 const updateQuestion = async (req, res) => {
   try {
     const question = await Question.findById(mongoose.Types.ObjectId(req.params.id))
-    await question.updateOne({content: req.body.content})
+    await question.updateOne({ content: req.body.content })
+    question.content = req.body.content
     await question.save()
     return res.send(question)
   } catch (err) {
