@@ -26,7 +26,7 @@ userRouter.post('/create', createUser)
 const getAllUsers = async (req, res) =>
   await User.find({}).then(users => {
     return res.send(users)
-  })
+  }) 
 
 userRouter.get('/all', getAllUsers)
 
