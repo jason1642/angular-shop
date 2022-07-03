@@ -18,6 +18,14 @@ const createListing = async (req, res) => {
 }
 itemRouter.post('/create', createListing)
 
+const getAllListings = async (req, res) => 
+  await Item.find({}).then(items => {
+    return res.send(items)
+  })
+
+  
+itemRouter.get('/all', getAllListings)
+
 const getOneListing = async (req, res) => {
   try {
     const item = await Item.findById(mongoose.Types.ObjectId(req.params.id))
@@ -31,9 +39,29 @@ itemRouter.get('/:id', getOneListing)
 
 
 
+const updateListing = async (req, res) => {
+  try {
+    const item = await Item.findById(mongoose.Types.ObjectId(req.params.id))
+    await item.updateOne(req.body)
+    await item.save()
+    return res.send(item)
+  } catch (err) {
+    return res.status(404).json({message: 'User not found', error: err})
+  }
+}
 
+itemRouter.put('/:id/update', updateListing)
 
-
+const deleteUser = async (req, res) => {
+  try { 
+    await Item.deleteOne({ _id: mongoose.Types.ObjectId(req.params.id) }).then(message => {
+      return res.send(message)
+    })
+  } catch (err) {
+  return res.json({message: 'User not found', error: err})
+  }
+}
+itemRouter.delete('/:id/delete', deleteUser)
 
 
 

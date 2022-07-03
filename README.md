@@ -2,6 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
+
+## API
+  ### User actions
+    - CRUD, (Read one/many)
+    - (un)Follow seller (other user)
+    - Read - all listings, cart Items, save for later items, orders(history), 
+    - 
+  ### Item(listing) actions
+    - CRUD, (Read one/many)
+  
+## API methods
+  - Item price renders different if original and current price differ.
+  - Currency conversion based on current user and seller local currencies.
+  - Shipping estimations based on item location and user (input/automatic) location.
+  - Tax estimations in cart based on state or default for international
+## Item queries
+  - Filters based one size, color, category, cost, brand, 
+  - 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

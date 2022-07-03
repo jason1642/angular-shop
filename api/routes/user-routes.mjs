@@ -21,7 +21,7 @@ const createUser = async (req, res, next) => {
 
 }
 userRouter.post('/create', createUser)
-
+ 
 
 const getAllUsers = async (req, res) =>
   await User.find({}).then(users => {

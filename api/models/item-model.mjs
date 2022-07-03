@@ -27,6 +27,7 @@ const itemSchema = new mongoose.Schema({
   gender: {
     type: String
   },
+  brand: String,
   tags: [String],
   seller: {
     type: {
