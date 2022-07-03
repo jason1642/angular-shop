@@ -44,13 +44,20 @@ const itemSchema = new mongoose.Schema({
     },
     required: true,
   },
-  cost: {type:{
+  cost: {
+    type: {
     original_price: Number,
     latest_price: Number,
     currency: String,
   },
-  required: true},
+    required: true
+  },
   images: [String],
+
+  questions: {
+    type: [],
+
+  },
 
   _id: {
     type: mongoose.Schema.Types.ObjectId
