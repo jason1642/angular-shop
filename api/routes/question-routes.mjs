@@ -90,6 +90,33 @@ const updateQuestion = async (req, res) => {
 questionRouter.put('/:id/update', updateQuestion)
 
 
+const deleteQuestion = async (req, res) => {
+  try {
+    await Question.deleteOne({ _id: mongoose.Types.ObjectId(req.params.id) }).then(message => {
+      return res.send(message)
+    })
+  } catch (err) {
+    console.log(err)
+    return res.status(403).json({message: "There was an error deleting your question", error: err})
+  }
+}
 
+questionRouter.delete('/:id/delete', deleteQuestion)
+
+
+
+const answerQuestion = async (req, res) => {
+  try { 
+    const question = await Question.findById(mongoose.Types.ObjectId(req.params.id))
+    // await question.updateOne()
+    
+
+  } catch (err) {
+    console.log(err)
+    return res.status(403).json({message: "There was an error adding an answer to the question", error: err})
+
+  }
+}
+questionRouter.patch('/:id/answer', answerQuestion)
 
 export default questionRouter;
