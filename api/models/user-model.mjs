@@ -23,7 +23,7 @@ const User = mongoose.model('User', new mongoose.Schema({
     type: String,
     required: [true, 'Enter a password'],
     minlength: 5,
-    maxlength: 255
+    maxlength: 255 
   },  
   profile_image: {
     type: String
